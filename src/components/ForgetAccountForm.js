@@ -45,9 +45,8 @@ export default class App extends Component {
 
     forgetAccountById() {
         AccountsApi.forgetAccount(this.state.forgetInput).then(response => {
-            this.setState({
-                accounts: response
-            });
+            console.log(response);
+            this.getAllAccounts();
         }).catch(reason => {
             console.log(reason);
         });

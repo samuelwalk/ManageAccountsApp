@@ -26,7 +26,7 @@ export default class AccountsApi {
     static forgetAccount(id) {
         return fetch(service.uri + service.port + `/forget/${id}`, {}).then(res => {
             if (res.status === 200) {
-                return res.json();
+                return res;
             }
             throw Error('Invalid response: ' + res.status);
         });
