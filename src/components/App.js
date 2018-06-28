@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import RequestAccountForm from './ForgetAccountForm';
-import {Jumbotron} from 'react-bootstrap';
-
 
 export default class App extends Component {
 
@@ -11,9 +9,9 @@ export default class App extends Component {
 
     render() {
         return (<div className="container-fluid">
-            <Jumbotron>
-                <h1>PII Librarian Application</h1>
-            </Jumbotron>
+            <div className="jumbotron">
+                <h1>PII Librarian App Demo</h1>
+            </div>
             <RequestAccountForm />
         </div>);
     }
