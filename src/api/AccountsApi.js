@@ -23,30 +23,14 @@ export default class AccountsApi {
         });
     }
 
-    // static createAccount(payload) {
-    //     return fetch(`/account/`).then(res => {
-    //         if (res.status === 200) {
-    //             return res.json();
-    //         }
-    //         throw Error('Invalid response: ' + res.status);
-    //     });
-    // }
-    //
-    // static updateAccount(payload) {
-    //     return fetch(`/account/`).then(res => {
-    //         if (res.status === 200) {
-    //             return res.json();
-    //         }
-    //         throw Error('Invalid response: ' + res.status);
-    //     });
-    // }
-    //
-    // static deleteAccount(id) {
-    //     return fetch(`/account/${id}`).then(res => {
-    //         if (res.status === 200) {
-    //             return res.json();
-    //         }
-    //         throw Error('Invalid response: ' + res.status);
-    //     });
-    // }
+    static forgetAccount(id) {
+        return fetch(service.uri + service.port + `/account/${id}`, {
+            method: 'DELETE'
+        }).then(res => {
+            if (res.status === 200) {
+                return res.json();
+            }
+            throw Error('Invalid response: ' + res.status);
+        });
+    }
 }

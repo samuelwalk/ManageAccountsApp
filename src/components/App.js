@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import RequestAccountForm from './RequestAccountForm';
+import RequestAccountForm from './ForgetAccountForm';
 import {Jumbotron} from 'react-bootstrap';
 
 

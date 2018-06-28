@@ -8,8 +8,8 @@ export default class App extends Component {
         super(props);
         this.state = {
             accounts: [],
-            inputId: '',
-            requestedAccount: ''
+            searchInput: '',
+            forgetInput: ''
         };
         autoBind(this);
     }
@@ -34,7 +34,7 @@ export default class App extends Component {
     }
 
     getAccountById() {
-        AccountsApi.getAccount(this.state.inputId).then(response => {
+        AccountsApi.getAccount(this.state.searchInput).then(response => {
             this.setState({
                 accounts: response
             });
@@ -43,30 +43,52 @@ export default class App extends Component {
         });
     }
 
-    handleInputIdChange(e) {
-        const inputId = e.target.value();
-        this.setState({inputId});
+    forgetAccountById() {
+        AccountsApi.forgetAccount(this.state.forgetInput).then(response => {
+            this.setState({
+                accounts: response
+            });
+        }).catch(reason => {
+            console.log(reason);
+        });
+    }
+
+    handleSearchInputChange(e) {
+        this.setState({searchInput: e.target.value});
+    }
+
+    handleForgetInputChange(e) {
+        this.setState({forgetInput: e.target.value});
+    }
+
+    handleSearchButtonPress(e) {
+        e.preventDefault();
+        this.getAccountById();
+    }
+
+    handleForgetButtonPress(e) {
+        e.preventDefault();
+        this.forgetAccountById();
     }
 
     render() {
         return (
             <div>
-                {this.state.requestedAccount};
                 <div>
                     <h3>Find account by ID</h3>
                     <form onSubmit={this.getAccountById}>
-                        <label>
-                            <input type="text" value={this.state.value} onChange={this.handleInputIdChange} />
-                        </label>
-                        <input type="submit" value="Submit" />
+                        <input type="text" onChange={this.handleSearchInputChange} />
                     </form>
+                    <button onClick={this.handleSearchButtonPress}>Search</button>
                 </div>
 
-
-                {this.state.requestedAccount && <div>
-                    <h4>Here is the account information you requested</h4>
-                    <p>{this.state.requestedAccount}</p>
-                </div>}
+                <div>
+                    <h3>Forget account by ID</h3>
+                    <form onSubmit={this.getAccountById}>
+                        <input type="text" onChange={this.handleForgetInputChange} />
+                    </form>
+                    <button onClick={this.handleForgetButtonPress}>Forget</button>
+                </div>
 
                 <div>
                     <h3>All Accounts</h3><span><button onClick={this.getAllAccounts}>Refresh</button></span>
