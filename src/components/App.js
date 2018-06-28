@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import SearchBar from './SubmitAccountForm';
 import RequestAccountForm from './RequestAccountForm';
-import ForgetInfoForm from './ForgetInfoForm';
-import Navbar from './Navbar';
+import {Jumbotron} from 'react-bootstrap';
+
 
 export default class App extends Component {
 
@@ -11,12 +10,11 @@ export default class App extends Component {
     }
 
     render() {
-        return (<div>
-            <h1>Hello!</h1>
-            {/*<Navbar />*/}
-            {/*<SearchBar />*/}
+        return (<div className="container-fluid">
+            <Jumbotron>
+                <h1>PII Librarian Application</h1>
+            </Jumbotron>
             <RequestAccountForm />
-            {/*<ForgetInfoForm />*/}
         </div>);
     }
 };
