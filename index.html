@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div class="ui top attached tabular menu">
+        <a class="active item" data-tab="requestInfo">Request Account Information</a>
+        <a class="item" data-tab="submitInfo">Submit Account Information</a>
+        <a class="item" data-tab="forgetInfo">Place An Account On The Forget List</a>
+    </div>
+    <div class="ui bottom attached active tab segment" data-tab="requestInfo">
+        <form class="ui form">
+            <div class="field">
+                <label>Search By Account Number</label>
+                <input type="text" name="account-number" placeholder="Account Number">
+            </div>
+            <button class="ui button" type="submit">Search</button>
+        </form>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Balance</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Sam</td>
+                <td>Walk</td>
+                <td>5454 Blockchain Ln.</td>
+                <td>614-555-7907</td>
+                <td>$15,678</td>
+            </tr>
+            <tr>
+                <td class="error"><i class="attention icon"></i> Classified</td>
+                <td class="error"><i class="attention icon"></i> Classified</td>
+                <td class="error"><i class="attention icon"></i> Classified</td>
+                <td class="error"><i class="attention icon"></i> Classified</td>
+                <td class="error"><i class="attention icon"></i> Classified</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="submitInfo">
+        <form class="ui form">
+            <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
+            </div>
+            <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+            </div>
+            <div class="field">
+                <label>Address</label>
+                <input type="text" name="address" placeholder="Address">
+            </div>
+            <div class="field">
+                <label>Phone Number</label>
+                <input type="text" name="phone-number" placeholder="Phone Number">
+            </div>
+            <div class="field">
+                <label>Balance</label>
+                <input type="text" name="balance" placeholder="Balance">
+            </div>
+            <button class="ui button" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="forgetInfo">
+        <form class="ui form">
+            <div class="field">
+                <label>Account To Be Forgotten</label>
+                <input type="text" name="first-name" placeholder="Account Number">
+            </div>
+            <button class="ui button" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="src/main.js"></script>
+</html>
