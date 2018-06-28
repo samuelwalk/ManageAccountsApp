@@ -24,9 +24,7 @@ export default class AccountsApi {
     }
 
     static forgetAccount(id) {
-        return fetch(service.uri + service.port + `/account/${id}`, {
-            method: 'DELETE'
-        }).then(res => {
+        return fetch(service.uri + service.port + `/forget/${id}`, {}).then(res => {
             if (res.status === 200) {
                 return res.json();
             }
