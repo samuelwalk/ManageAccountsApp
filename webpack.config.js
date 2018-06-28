@@ -1,25 +1,24 @@
-var path = require('path');
-var webpack = require('webpack');
+var HTMLWebpackPlugin = require('html-webpack-plugin');
+var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+    template: __dirname + '/index.html',
+    filename: 'index.html',
+    inject: 'body'
+});
 
 module.exports = {
-    entry: './main.js',
+    entry: __dirname + '/index.js',
     output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: 'app.bundle.js'
+        filename: 'main.bundle.js',
+        path: __dirname + '/build'
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                exclude: /node_modules/,
+                loader: 'babel-loader'
             }
         ]
     },
-    stats: {
-        colors: true
-    },
-    devtool: 'source-map'
+    plugins: [HTMLWebpackPluginConfig]
 };

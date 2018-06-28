@@ -8,16 +8,15 @@ export default class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
     }
 
     render() {
         return (<div>
             <h1>Hello!</h1>
-            <Navbar />
-            <SearchBar />
+            {/*<Navbar />*/}
+            {/*<SearchBar />*/}
             <RequestAccountForm />
-            <ForgetInfoForm />
+            {/*<ForgetInfoForm />*/}
         </div>);
     }
 };

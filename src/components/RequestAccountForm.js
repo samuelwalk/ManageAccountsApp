@@ -1,23 +1,27 @@
 import React, {Component} from 'react';
+import AccountsApi from '../api/AccountsApi';
 
 export default class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            accounts: null
+        };
+    }
+
+    componentDidMount() {
+        AccountsApi.getAccounts().then(data => {
+            this.setState({
+                accounts: data
+            });
+        });
     }
 
     render() {
         return (
-            <div class="ui bottom attached active tab segment" data-tab="requestInfo">
-                <form class="ui form">
-                    <div class="field">
-                        <label>Search By Account Number</label>
-                        <input type="text" name="account-number" placeholder="Account Number" />
-                    </div>
-                    <button class="ui button" type="submit">Search</button>
-                </form>
-                <table class="ui celled table">
+            <div>
+                <table>
                     <thead>
                         <tr>
                             <th>First Name</th>
@@ -28,20 +32,15 @@ export default class App extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Sam</td>
-                            <td>Walk</td>
-                            <td>5454 Blockchain Ln.</td>
-                            <td>614-555-7907</td>
-                            <td>$15,678</td>
-                        </tr>
-                        <tr>
-                            <td class="error"><i class="attention icon"></i> Classified</td>
-                            <td class="error"><i class="attention icon"></i> Classified</td>
-                            <td class="error"><i class="attention icon"></i> Classified</td>
-                            <td class="error"><i class="attention icon"></i> Classified</td>
-                            <td class="error"><i class="attention icon"></i> Classified</td>
-                        </tr>
+                    {this.state.accounts && this.state.accounts.map(account => {
+                      <tr>
+                          <td>{account.firstName}</td>
+                          <td>{account.lastName}</td>
+                          <td>{account.address}</td>
+                          <td>{account.phoneNumber}</td>
+                          <td>{account.balance}</td>
+                      </tr>
+                    })}
                     </tbody>
                 </table>
             </div>
