@@ -1,6 +1,17 @@
 {
+  "name": "manageaccountsapp",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "author": "Kellen Anker",
+  "license": "ISC",
+  "homepage": "https://github.com/samuelwalk/ManageAccountsApp#readme",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelwalk/ManageAccountsApp.git"
+  },
   "scripts": {
-    "webpack": "npm run webpack"
+    "start": "webpack-dev-server"
   },
   "depedencies": {
     "react": "~16.4.1"
@@ -10,6 +21,13 @@
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^4.12.2"
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "webpack": "^4.13.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   }
 }
