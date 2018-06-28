@@ -1,7 +1,12 @@
+const service = {
+    uri: 'http://localhost:',
+    port: 9000
+};
+
 export default class AccountsApi {
 
     static getAccounts() {
-        return fetch('http://localhost:8000/accounts', {}).then(res => {
+        return fetch(service.uri + service.port + '/accounts', {}).then(res => {
             if (res.status === 200) {
                 return res.json();
             }
@@ -10,7 +15,7 @@ export default class AccountsApi {
     }
 
     static getAccount(id) {
-        return fetch(`/account/${id}`, {}).then(res => {
+        return fetch(service.uri + service.port + `/account/${id}`, {}).then(res => {
             if (res.status === 200) {
                 return res.json();
             }

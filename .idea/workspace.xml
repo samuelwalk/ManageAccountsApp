@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1fe84fa3-b644-485c-a911-6da7ddad7fb6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/src/api/AccountsApi.js" afterPath="$PROJECT_DIR$/src/api/AccountsApi.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/ForgetInfoForm.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/components/RequestAccountForm.js" afterPath="$PROJECT_DIR$/src/components/RequestAccountForm.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +25,8 @@
       <file leaf-file-name="RequestAccountForm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/RequestAccountForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+            <state relative-caret-position="-5">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -35,11 +34,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SubmitAccountForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/SubmitAccountForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AccountsApi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/AccountsApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="327">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="32" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -102,8 +111,8 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
-        <option value="$PROJECT_DIR$/src/api/AccountsApi.js" />
         <option value="$PROJECT_DIR$/src/components/RequestAccountForm.js" />
+        <option value="$PROJECT_DIR$/src/api/AccountsApi.js" />
       </list>
     </option>
   </component>
@@ -314,7 +323,7 @@
       <workItem from="1530039668459" duration="5719000" />
       <workItem from="1530192854510" duration="10276000" />
       <workItem from="1530204468622" duration="501000" />
-      <workItem from="1530205116117" duration="7077000" />
+      <workItem from="1530205116117" duration="8910000" />
     </task>
     <task id="LOCAL-00001" summary="set up react project">
       <created>1530197683511</created>
@@ -327,7 +336,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24045000" />
+    <option name="totallyTimeSpent" value="25878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="22" width="1227" height="778" extended-state="6" />
@@ -577,23 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SubmitAccountForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ForgetInfoForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-          <folding>
-            <element signature="e#210#657#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -654,18 +646,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ForgetInfoForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SubmitAccountForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/AccountsApi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="327">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="32" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/RequestAccountForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        <state relative-caret-position="-5">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
