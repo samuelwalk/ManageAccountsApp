@@ -1,9 +1,12 @@
-// $('item')
-//     .on('click', function() {
-//         // programmatically activating tab
-//         $.tab('change tab', 'submitInfo');
-//     });
+import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './App';
 
-$('.menu .item')
-    .tab()
-;
+const render = () => {
+    ReactDOM.render(
+        <App />,
+        document.getElementById('app')
+    );
+};
+
+render(App);
