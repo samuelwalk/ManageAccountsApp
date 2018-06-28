@@ -1,7 +1,7 @@
 export default class AccountsApi {
 
     static getAccounts() {
-        return fetch('/accounts').then(res => {
+        return fetch('http://localhost:8000/accounts', {}).then(res => {
             if (res.status === 200) {
                 return res.json();
             }
@@ -10,7 +10,7 @@ export default class AccountsApi {
     }
 
     static getAccount(id) {
-        return fetch(`/account/${id}`).then(res => {
+        return fetch(`/account/${id}`, {}).then(res => {
             if (res.status === 200) {
                 return res.json();
             }
@@ -18,30 +18,30 @@ export default class AccountsApi {
         });
     }
 
-    static createAccount(payload) {
-        return fetch(`/account/`).then(res => {
-            if (res.status === 200) {
-                return res.json();
-            }
-            throw Error('Invalid response: ' + res.status);
-        });
-    }
-
-    static updateAccount(payload) {
-        return fetch(`/account/`).then(res => {
-            if (res.status === 200) {
-                return res.json();
-            }
-            throw Error('Invalid response: ' + res.status);
-        });
-    }
-
-    static deleteAccount(id) {
-        return fetch(`/account/${id}`).then(res => {
-            if (res.status === 200) {
-                return res.json();
-            }
-            throw Error('Invalid response: ' + res.status);
-        });
-    }
+    // static createAccount(payload) {
+    //     return fetch(`/account/`).then(res => {
+    //         if (res.status === 200) {
+    //             return res.json();
+    //         }
+    //         throw Error('Invalid response: ' + res.status);
+    //     });
+    // }
+    //
+    // static updateAccount(payload) {
+    //     return fetch(`/account/`).then(res => {
+    //         if (res.status === 200) {
+    //             return res.json();
+    //         }
+    //         throw Error('Invalid response: ' + res.status);
+    //     });
+    // }
+    //
+    // static deleteAccount(id) {
+    //     return fetch(`/account/${id}`).then(res => {
+    //         if (res.status === 200) {
+    //             return res.json();
+    //         }
+    //         throw Error('Invalid response: ' + res.status);
+    //     });
+    // }
 }

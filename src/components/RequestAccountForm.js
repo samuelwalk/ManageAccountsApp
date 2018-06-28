@@ -1,21 +1,34 @@
 import React, {Component} from 'react';
 import AccountsApi from '../api/AccountsApi';
+import autoBind from 'auto-bind';
 
 export default class App extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            accounts: null
+            accounts: []
         };
+        autoBind(this);
     }
 
     componentDidMount() {
-        AccountsApi.getAccounts().then(data => {
+        AccountsApi.getAccounts().then(response => {
+            console.log(response);
             this.setState({
-                accounts: data
+                accounts: response
             });
         });
+    }
+
+    requestAccounts() {
+        AccountsApi.getAccounts().then(response => {
+            this.setState({
+                accounts: response
+            });
+        }).catch(reason => {
+            console.log(reason);
+        })
     }
 
     render() {
@@ -24,8 +37,8 @@ export default class App extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
+                            <th>Account Number</th>
+                            <th>Name</th>
                             <th>Address</th>
                             <th>Phone Number</th>
                             <th>Balance</th>
@@ -33,16 +46,19 @@ export default class App extends Component {
                     </thead>
                     <tbody>
                     {this.state.accounts && this.state.accounts.map(account => {
-                      <tr>
-                          <td>{account.firstName}</td>
-                          <td>{account.lastName}</td>
-                          <td>{account.address}</td>
-                          <td>{account.phoneNumber}</td>
-                          <td>{account.balance}</td>
-                      </tr>
-                    })}
+                        return (<tr>
+                              <td>{account.accountNumber}</td>
+                              <td>{account.name}</td>
+                              <td>{account.address}</td>
+                              <td>{account.phoneNumber}</td>
+                              <td>{account.balance}</td>
+                          </tr>);
+                        })
+                    }
                     </tbody>
                 </table>
+                <br />
+                <button onClick={this.requestAccounts}>Refresh</button>
             </div>
         );
     }
